@@ -1197,7 +1197,14 @@
 
   }
 
+  @media(max-width:450px){
+    .view-all-button{
+      width: 36%;
+      margin-left: 32%;
+      margin-right: 32%;
   
+    }
+  }
 
 
 
