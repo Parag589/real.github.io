@@ -930,3 +930,343 @@
   /* .navbar-text{
     font-family: "Audiowide", sans-serif;
   } */
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --whiteColor: #ffffff;
+    --overlayColor: rgba(21, 163, 182, .6);
+    --redColor: #ea723d;
+    --saleColor: #1ea69a;
+    --grayColor: darkgray;
+    --fontSize: 14px;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #EEE;
+    text-transform: capitalize;
+  }
+  
+  .card-container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+  }
+  
+  .card-container .box {
+    background-color: var(--whiteColor);
+    box-shadow: -5px 7px 12px 3px rgba(184,175,175,0.49);
+    position: relative;
+  }
+  
+  .card-container .box img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .box .img-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  
+   .card-container .box .img-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .card-container .box .img-container .after a{
+    position: absolute;
+    border: 1px solid var(--whiteColor);
+    padding: 10px;
+    font-weight:bold;
+    font-size: var(--fontSize);
+    color: var(--whiteColor);
+    top: 150px;
+    left: calc(50% - 70px);
+    text-decoration: none;
+    display: block;
+  }
+  
+  .box .img-container:hover .after {
+    cursor: pointer;
+    background: var(--overlayColor);
+    opacity: 1;
+  } 
+  
+  .img-container i {
+    position: absolute;
+    color: var(--whiteColor);
+    top: 250px;
+    right: 70px;
+    font-size: 20px;
+  }
+  
+  .img-container .exchange {
+    right: 40px;
+  }
+  
+  .card-container .box .featured {
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+  }
+  
+  .card-container .box .featured p {
+    position: absolute;
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+    width: fit-content;
+    padding: 5px ;
+    top: -14.5px;
+  }
+  
+  .card-container .box .featured::after{
+    content: " ";
+    position: absolute;
+    border-style: solid;
+    border-width: 14px 0 14px 14px;
+    border-color: transparent transparent transparent var(--redColor);
+    top: -14px;
+    left: 74px;
+  }
+  
+  .box .hot {
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+    width: fit-content;
+    padding: 2px 7px;
+    position: absolute;
+    top: 250px;
+    left: 20px;
+  }
+  
+  .box .box-text {
+    padding: 20px;
+  }
+  
+  .box .box-text h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .box .box-text > p {
+    margin-bottom: 20px;
+    color: var(--grayColor);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    font-size: var(--fontSize);
+  }
+  
+  .container-prop {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  
+  .container-prop .prop{
+    margin-right: 15px;
+    font-size: var(--fontSize);
+  }
+  
+  .container-prop .prop i {
+    text-align: center;
+    color: var(--grayColor);
+  }
+  
+  .container-prop .prop p {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .container-prop .prop .num,
+  .container-prop .prop .num span {
+    display: inline-block;
+    margin-left: 15px;
+    
+  }
+  
+  .container-prop .prop .num span {
+    color: var(--grayColor);
+  }
+  
+  .sale p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--fontSize);
+  }
+  
+   .sale p:nth-child(2) {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 22px;
+    color: var(--saleColor);
+  }
+
+  .flats-heading{
+    width: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    font-family: audiowide;
+  }
+  
+  .villas-heading{
+    width: 137px;
+    padding-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    font-family: audiowide;
+  }
+  @media (max-width: 500px){
+
+    .villas-heading{
+      width: 110px;
+      padding-top: 10%;
+      padding-bottom: 13px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      margin-bottom: 2%;
+      font-family: audiowide;
+    }
+    .flats-heading{
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      margin-bottom: 5%;
+      font-family: audiowide;
+    }
+
+    .heading-line{
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 35%;
+      width: 60px;
+    }
+  }
+
+  .heading-line{
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 35%;
+    width: 10%;
+  }
+
+  .view-all-button{
+    width: 26%;
+    margin-left: 37%;
+    margin-right: 37%;
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .whatsapp-floating_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    z-index: 1000;
+  }
+  
+  @keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+  
+  .whatsapp-contact_icon {
+    background-color: #42db87;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size:30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #42db87;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+  }
+  
+  
+  .text_icon {
+    margin-top: 8px;
+    color: #707070;
+    font-size: 13px;
+  }
+  
+
+  
