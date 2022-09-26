@@ -1090,6 +1090,12 @@
     font-size: var(--fontSize);
   }
   
+  @media(max-width:500px){
+    .responsive-card-text{
+      font-size: 10px;
+    }
+  }
+  
   .container-prop {
     display: flex;
     align-items: center;
